@@ -1,0 +1,63 @@
+[project]
+name = "tinygpt"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "github.com/glidea"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10, <3.14"
+dependencies = [
+    "torch (>=2.8.0,<3.0.0)",
+    "transformers (>=4.56.2,<5.0.0)",
+    "datasets (>=4.1.1,<5.0.0)"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.0"
+]
+
+[tool.poetry]
+packages = [{include = "pretrain"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = [
+    "__pycache__",
+    ".git",
+    "*.pyc",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "N",  # pep8-naming
+    "UP", # pyupgrade
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "TCH",   # flake8-type-checking
+    "Q",     # flake8-quotes
+    "RET",   # flake8-return
+]
+ignore = [
+    "E501",    # line length
+    "W293",    # blank line contains whitespace
+    "TC002",   # type-checking import
+    "RET504",  # unnecessary assignment before return
+    "PLR2004", # magic number
+]
+
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.14.3,<0.15.0)"
+]

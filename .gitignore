@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+.ruff_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.idea/
+.vscode/
+.cursor/
+.claude/
+.bosskit/
+*.swp
+*.bak
+*.swo
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# ipython
+.ipython/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Build artifacts
+dist/
+build/
+*.egg
+*.whl
+
+# Misc
+*.pid
+*.seed
+*.transit.log
+
+# Model
+*.pt
+*.pt.tmp
+tokenizer_config.json
+tokenizer.json
+special_tokens_map.json
+b_sft/desgin.md
